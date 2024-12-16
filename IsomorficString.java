@@ -41,7 +41,7 @@ class IsomorphicString {
     }
 
     public static void main(String[] args) {
-        solution  solution= new solution();
+        IsomorphicString  solution= new IsomorphicString();
 
         // Test case 1: "egg" and "add" -> should return true
         String s1 = "egg";
