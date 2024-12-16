@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+
 class IsomorphicString {
     public boolean isIsomorphic(String s, String t) {
         // Create two hash maps to store character mappings from s -> t and t -> s
@@ -40,7 +41,7 @@ class IsomorphicString {
     }
 
     public static void main(String[] args) {
-        Solution  = new Solution();
+        solution  solution= new solution();
 
         // Test case 1: "egg" and "add" -> should return true
         String s1 = "egg";
