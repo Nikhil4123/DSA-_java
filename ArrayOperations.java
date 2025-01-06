@@ -7,7 +7,7 @@ public class ArrayOperations {
         System.out.println("String with spaces: " + addSpaces(s, spaces));
 
         // Example 2: Next Greater Element for two arrays
-        int[] nums1 = {4, 1, 2};
+        int[] nums1 = {4,2};
         int[] nums2 = {1, 3, 4, 2};
         int[] result = nextGreaterElement(nums1, nums2);
         System.out.print("Next greater elements: ");
