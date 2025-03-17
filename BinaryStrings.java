@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Scanner;
 
 class BinaryStrings {
@@ -9,30 +6,33 @@ class BinaryStrings {
         int k = sc.nextInt();
         sc.close();
 
-        ArrayList<String> result = generateBinaryStrings(k);
-        System.out.println(result.size());
-        System.out.println(result);
+        char[] str = new char[k];
+
+        // Generate all binary strings starting with '0'
+        str[0] = '0';
+        generateAllStrings(k, str, 1);
+
+        // Generate all binary strings starting with '1'
+        str[0] = '1';
+        generateAllStrings(k, str, 1);
     }
 
-    public static ArrayList<String> generateBinaryStrings(int k) {
-        ArrayList<String> result = new ArrayList<>();
-        Queue<String> queue = new LinkedList<>();
-        
-        queue.add("0");
-        queue.add("1");
-
-        while (!queue.isEmpty()) {
-            String current = queue.poll();
-
-            if (current.length() == k) {
-                result.add(current);
-            } else {
-                queue.add(current + "0"); // Always add "0"
-                if (current.charAt(current.length() - 1) != '1') {
-                    queue.add(current + "1"); // Add "1" only if last character is not '1'
-                }
-            }
+    public static void generateAllStrings(int k, char[] str, int n) {
+        if (n == k) {  // Base Case: If string is of length K, print it
+            System.out.println(new String(str));
+            return;
         }
-        return result;
+
+        // If the previous character is '1', we can only place '0'
+        if (str[n - 1] == '1') {
+            str[n] = '0';
+            generateAllStrings(k, str, n + 1);
+        } else { // If the previous character is '0', we can place both '0' and '1'
+            str[n] = '0';
+            generateAllStrings(k, str, n + 1);
+
+            str[n] = '1';
+            generateAllStrings(k, str, n + 1);
+        }
     }
 }
