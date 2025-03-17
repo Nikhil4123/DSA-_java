@@ -21,9 +21,7 @@ class Staircase {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        testCases();
-    }
+ 
 
     public static void testCases() {
         System.out.println("Test Case 1: n = 1");
