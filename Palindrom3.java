@@ -2,39 +2,33 @@ import java.util.*;
 
 class Solution {
     public int countPalindromicSubsequence(String s) {
-        // Map to store the first and last index of each character
-        Map<Character, int[]> map = new HashMap<>();
+=        Map<Character, int[]> map = new HashMap<>();
 
-        // Populate the map with the first and last occurrence of each character
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (!map.containsKey(c)) {
-                map.put(c, new int[]{i, i}); // Initialize with the first occurrence
+                map.put(c, new int[]{i, i}); 
             } else {
-                map.get(c)[1] = i; // Update the last occurrence
+                map.get(c)[1] = i; 
             }
         }
 
         int ans = 0;
 
-        // Process each character to count unique characters between first and last indices
         for (Map.Entry<Character, int[]> entry : map.entrySet()) {
             int[] indices = entry.getValue();
             int start = indices[0];
             int end = indices[1];
 
-            // Skip if there are no characters between start and end
             if (end - start <= 1) {
                 continue;
             }
 
-            // Use a Set to count unique characters between start and end
             Set<Character> uniqueChars = new HashSet<>();
             for (int i = start + 1; i < end; i++) {
                 uniqueChars.add(s.charAt(i));
             }
 
-            // Add the count of unique characters to the answer
             ans += uniqueChars.size();
         }
 
