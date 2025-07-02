@@ -1,5 +1,5 @@
 Author: Nikhil Sarak
-Welcome to my Data Structures and Algorithms (DSA) Notes repository! I’m a third-year IT engineering student passionate about software development, particularly Java app development and web development. With experience in cybersecurity and a strong background in app and web technologies like Firebase, Android Studio, Node.js, React.js, MongoDB, and Tailwind CSS, this repository serves as a consolidated space for DSA concepts and solutions in Java.
+Welcome to my Data Structures and Algorithms (DSA) Notes repository! I'm a third-year IT engineering student passionate about software development, particularly Java app development and web development. With experience in cybersecurity and a strong background in app and web technologies like Firebase, Android Studio, Node.js, React.js, MongoDB, and Tailwind CSS, this repository serves as a consolidated space for DSA concepts and solutions in Java.
 
 🔥 About the Project
 This repository is my personal collection of DSA notes and optimized solutions to common DSA problems, primarily solved using Java. It covers a variety of algorithmic concepts, from basics to more advanced topics, and includes solutions to selected LeetCode, CodeChef, and HackerRank problems. These notes are created to serve as a quick reference for myself and others, especially students, for understanding and implementing essential DSA techniques.
@@ -70,7 +70,7 @@ Language: Java
 IDE: IntelliJ IDEA, VSCode, or any preferred Java editor
 Tools: Git for version control, GitHub for repository management
 📝 Notes & Study Tips
-Throughout the journey of solving DSA problems, I’ve focused on:
+Throughout the journey of solving DSA problems, I've focused on:
 
 Writing clean and efficient code.
 Using optimized algorithms for better performance.
@@ -101,3 +101,34 @@ GitHub: Nikhil4123
 LinkedIn: Nikhil Sarak
 Email: nikhilsarak@example.com (replace with your actual email)
 Thank you for visiting my DSA Notes repository! I hope you find these resources helpful in mastering data structures and algorithms. 😊
+
+# DSA Codebase Structure
+
+This repository is organized by data structure and algorithm topics to make it easy to find, understand, and learn from the code. Each folder contains Java solutions and utilities for a specific topic, with a README.md describing the files inside.
+
+## Main Folders
+
+- `Arrays/` — Array-related problems and utilities
+- `Strings/` — String manipulation and algorithms
+- `LinkedLists/` — Linked list data structures and problems
+- `Trees/` — Tree data structures and algorithms
+- `Recursion/` — Recursion-based problems and techniques
+- `Sorting/` — Sorting algorithms
+- `SlidingWindow/` — Sliding window technique problems
+- `Hashing/` — Hashing-based problems and resources
+- `DailyProblems/` — Daily coding problems (as before)
+- `Practice/` — Practice problems (as before)
+- `Python/` — Python solutions (as before)
+
+## How to Use
+
+- Browse each folder for topic-specific code and explanations.
+- Each folder contains a `README.md` listing and describing its files.
+- `.class` files are Java compiled outputs and can be deleted if not needed.
+
+## Contribution
+
+- Add new problems to the appropriate topic folder.
+- Update the folder's `README.md` when adding new files.
+
+Happy learning and coding!
