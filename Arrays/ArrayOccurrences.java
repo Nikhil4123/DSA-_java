@@ -28,6 +28,5 @@ public class ArrayOccurrences {
             System.out.println(key + " -> " + occurrences.get(key));
         }
         
-        scanner.close();
     }
 }
