@@ -11,7 +11,6 @@ public class ArrayOccurrences {
         System.out.println("Enter the number of elements:");
         int n = scanner.nextInt();
 
-        System.out.println("Enter the elements:");
         for (int i = 0; i < n; i++) {
             int element = scanner.nextInt();
             arrayList.add(element);
