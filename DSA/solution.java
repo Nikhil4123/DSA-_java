@@ -1,9 +1,11 @@
 package DSA;
-public class solution {
+import java.util.*;
+
+public class Solution {
     public int minAddToMakeValid(String s) {
         int close = 0;
         int open = 0;
-        
+
         for (char ch : s.toCharArray()) {
             if (ch == '(') {
                 open++;
@@ -15,17 +17,59 @@ public class solution {
                 }
             }
         }
-        
+
         return open + close;
     }
 
+    // Extra: Build the corrected valid parentheses string
+    public String makeValidString(String s) {
+        StringBuilder sb = new StringBuilder();
+        int open = 0;
+
+        for (char ch : s.toCharArray()) {
+            if (ch == '(') {
+                open++;
+                sb.append(ch);
+            } else {
+                if (open > 0) {
+                    open--;
+                    sb.append(ch);
+                }
+            }
+        }
+
+        // Add missing ')'
+        while (open-- > 0) {
+            sb.append(')');
+        }
+
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
-        solution solution = new solution();
-        String input = "()))((";
-        int result = solution.minAddToMakeValid(input);
-        System.out.println("Minimum additions to make the parentheses valid: " + result);
+        Solution solution = new Solution();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter number of test cases: ");
+        int t = sc.nextInt();
+        sc.nextLine(); // consume newline
+
+        for (int i = 1; i <= t; i++) {
+            System.out.println("Enter parentheses string " + i + ": ");
+            String input = sc.nextLine();
+            int result = solution.minAddToMakeValid(input);
+            String corrected = solution.makeValidString(input);
+
+            System.out.println("Test Case " + i + ": " + input);
+            System.out.println("➝ Minimum additions needed: " + result);
+            System.out.println("➝ Corrected valid string: " + corrected);
+            System.out.println("---------------------------------");
+        }
+
+        sc.close();
     }
 }
+
 
 
 /*
