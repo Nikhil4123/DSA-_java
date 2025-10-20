@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class tp {
     static class Solution {
         public int leastInterval(char[] tasks, int n) {
-            System.out.println("=== TASK SCHEDULING ALGORITHM ===");
+            System.out.println("=== TASK SCHEDULING ALGORITHM =");
             System.out.println("Tasks: " + Arrays.toString(tasks));
             System.out.println("Cooldown period (n): " + n);
             System.out.println();
